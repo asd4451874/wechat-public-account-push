@@ -29,12 +29,13 @@ const main = async () => {
     // 获取在一起的日期差
     const loveDay = dayjs().diff(dayjs(config.loveDate), 'day')
     // 获取结婚的日期差
-    const marryDay = dayjs().diff(dayjs(config.marryDate), 'day')
+    //const marryDay = dayjs().diff(dayjs(config.marryDate), 'day')
     // 获取生日信息
     const birthdayMessage = getBirthdayMessage()
 
 
     // 集成所需信息
+    //{ name: toLowerLine('marryDay'), value: marryDay, color: getColor() },
     const week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     const wxTemplateParams = [
         { name: toLowerLine('date'), value: `${dayjs().format('YYYY-MM-DD')} ${week_list[dayjs().format('d')]}`, color: getColor() },
@@ -46,7 +47,7 @@ const main = async () => {
         { name: toLowerLine('windDirection'), value: windDirection, color: getColor() },
         { name: toLowerLine('windScale'), value: windScale, color: getColor() },
         { name: toLowerLine('loveDay'), value: loveDay, color: getColor() },
-        { name: toLowerLine('marryDay'), value: marryDay, color: getColor() },
+       
         { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
         { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
         { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
