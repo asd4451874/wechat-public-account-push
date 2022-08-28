@@ -113,22 +113,19 @@ import dayjs from 'dayjs'
     let resMessage = ''
     birthdayList.forEach(birthday => {
         let birthdayMessage = null
-        
+        let nextBirYear = dayjs().format('YYYY');
         let flag = false;
         if(dayjs().format('M') > 7){         
-          let nextBirYear = dayjs().add(1,'y').format('YYYY');
-          flag=true;
+           nextBirYear = dayjs().add(1,'y').format('YYYY');
+           flag=true;
         }else if(dayjs().format('M') = 7 && dayjs().format('D') > 8){
           flag=true;
-          let nextBirYear = dayjs().add(1,'y').format('YYYY');
+          nextBirYear = dayjs().add(1,'y').format('YYYY');
         }
         
         // 获取距离下次生日的时间
-       if(flag){
-        let nextBir = dayjs(nextBirYear + '-' + '07-08').diff(dayjs().format('YYYY-MM-DD'), 'day')
-       }else{
-        let nextBir = dayjs(dayjs().format('YYYY') + '-' + birthday.date).diff(dayjs(), 'day')
-       }
+       let nextBir = dayjs(nextBirYear + '-' + '07-08').diff(dayjs().format('YYYY-MM-DD'), 'day')
+  
                 
         if (nextBir === 0) {
             birthdayMessage = `今天是 ${birthday.name} 生日哦，祝${birthday.name}生日快乐！`
