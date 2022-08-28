@@ -116,17 +116,17 @@ import dayjs from 'dayjs'
         let flag = false;
         if(dayjs().format('M') > 7){         
           const nextBirYear = dayjs().add(1,'y').format('YYYY');
-         flag=true;
+          flag=true;
         }else if(dayjs().format('M') = 7 && dayjs().format('D') > 8){
           flag=true;
-          const nextBirYear = dayjs().add(1,'y').format('YYYY');
+          let nextBirYear = dayjs().add(1,'y').format('YYYY');
         }
         
         // 获取距离下次生日的时间
        if(flag){
-        const nextBir = dayjs(nextBirYear + '-' + '07-08').diff(dayjs().format('YYYY-MM-DD'), 'day')
+        let nextBir = dayjs(nextBirYear + '-' + '07-08').diff(dayjs().format('YYYY-MM-DD'), 'day')
        }else{
-        const nextBir = dayjs(dayjs().format('YYYY') + '-' + birthday.date).diff(dayjs(), 'day')
+        let nextBir = dayjs(dayjs().format('YYYY') + '-' + birthday.date).diff(dayjs(), 'day')
        }
                 
         if (nextBir === 0) {
