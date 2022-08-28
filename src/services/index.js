@@ -113,7 +113,7 @@ import dayjs from 'dayjs'
     let resMessage = ''
     birthdayList.forEach(birthday => {
         let birthdayMessage = null
-        const flag = flase;
+        let flag = false;
         if(dayjs().format('M') > 7){         
           const nextBirYear = dayjs().add(1,'y').format('YYYY');
          flag=true;
