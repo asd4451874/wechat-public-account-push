@@ -13,15 +13,16 @@ export const config = {
     // 所在省份
     province: "广东",
     // 所在城市
-    city: "广州",
+    city: "惠州",
     // 生日，修改名字为对应需要显示的名字，如果生日为农历， type为 r
     birthdays: [
-      {"name": "宝宝", "year": "1993", "date": "07-08", "type": 'r'}
+      {"name": "老婆", "year": "1993", "date": "12-27", "type": 'new'},
+      {"name": "家公", "year": "1993", "date": "08-09", "type": 'new'},
     ],
     // 在一起的日子，格式同上
-    loveDate: "2022-06-05"
+    loveDate: "2015-05-01",
     // 结婚纪念日
-   
+    marryDate: "2020-01-04"
     }
 
 // {{date.DATA}}  
