@@ -124,7 +124,7 @@ import dayjs from 'dayjs'
         }
         
         // 获取距离下次生日的时间
-       let nextBir = dayjs(nextBirYear + '-' + '07-08').diff(dayjs().format('YYYY-MM-DD'), 'day')
+       const nextBir = dayjs(nextBirYear + '-' + '07-08').diff(dayjs().format('YYYY-MM-DD'), 'day')
   
                 
         if (nextBir === 0) {
